@@ -5,10 +5,7 @@ with open(filename) as f:
     reader = csv.reader(f)
     header_row = next(reader)
 
-    highs = []
-    for row in reader:
-        high = int(row[5])
-        highs.append(high)
+    highs = [int(row[5]) for row in reader]
     
     print(highs)
 
