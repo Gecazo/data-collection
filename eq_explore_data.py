@@ -8,4 +8,7 @@ with open(readable_file, 'w') as f:
     json.dump(all_eq_data, f, indent = 4)
 
 all_eq_data = all_eq_data.get('features','')
-print(len(all_eq_data))
+
+mags = [eq_dict['properties']['mag'] for eq_dict in all_eq_data]
+
+print(mags[:10])
